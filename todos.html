@@ -14,53 +14,40 @@
     <div class="todos-main">
 
         <div class="todos-addbar">
-            <div class="todos-addbar_select-all" aria-label="Mark all items as done">
-                <button class="todos-addbar_select-all-button">↓</button>
-            </div>
-            <div class="todos-addbar_input" aria-label="Add new task to todo list">
-                <input type="text" placeholder="What needs to be done?">
-            </div>
+            <button class="todos-addbar_select-all-button" aria-label="Mark all items as done">↓</button>
+            <input type="text" placeholder="What needs to be done?" aria-label="Add new task to todo list">
         </div>
 
         <div class="todos-list">
-            <div class="todos-item">
-                <div class="todos-item_checkbox" aria-label="Mark task as done">
-                    <input type="checkbox">
-                </div>
-                <div class="todos-item_text">
-                    HTML
-                </div>
-                <div class="todos-item_remove-button" aria-label="Remove task">
-                    <button name="remove-item">✕</button>
-                </div>
+            <div class="todos-item __ready">
+                <textarea class="todos-item_text">Сделать html</textarea>
+                <input type="checkbox" aria-label="Mark task as done" checked="checked" class="todos-item_ready-mark">
+                <button class="todo-item_remove" aria-label="Remove task">remove</button>
             </div>
 
             <div class="todos-item">
-                <div class="todos-item_checkbox" aria-label="Mark task as done">
-                    <input type="checkbox">
-                </div>
-                <div class="todos-item_text">
-                    CSS
-                </div>
-                <div class="todos-item_remove-button" aria-label="Remove task">
-                    <button name="remove-item">✕</button>
-                </div>
+                <textarea class="todos-item_text">Сделать css и js</textarea>
+                <input type="checkbox" aria-label="Mark task as not done" class="todos-item_ready-mark">
+                <button class="todo-item_remove" aria-label="Remove task">remove</button>
             </div>
         </div>
 
         <div class="todos-actionbar">
             <div class="todos-actionbar_counter" aria-label="Amount of remaining tasks">
-                3 items left
+                n items left
             </div>
 
             <div class="todos-actionbar_filters">
-                <button class="todos-actionbar_filter" value="all" aria-label="Show all tasks">All</button>
+                <button class="todos-actionbar_filter __active" value="all" aria-label="Show all tasks">All</button>
                 <button class="todos-actionbar_filter" value="active" aria-label="Show current tasks">Active</button>
-                <button class="todos-actionbar_filter" value="completed" aria-label="Show completed tasks">Completed</button>
+                <button class="todos-actionbar_filter" value="completed" aria-label="Show completed tasks">Completed
+                </button>
             </div>
 
             <div class="todos-actionbar_clear">
-                <button class="todos-actionbar_clear-button" name="clear-completed" aria-label="Remove completed tasks">Clear completed</button>
+                <button class="todos-actionbar_clear-button" name="clear-completed" aria-label="Remove completed tasks">
+                    Clear completed
+                </button>
             </div>
         </div>
     </div>
