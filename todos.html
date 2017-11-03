@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todos</title>
+
+    <link rel="stylesheet" href="./styles/default.css"/>
+
+</head>
+<body>
+
+<div class="main-wrapper">
+    <div class="todos-header">
+        <h1 class="todos-title">todos</h1>
+    </div>
+
+    <div class="todos-container">
+
+        <div class="todos-addbar">
+            <button class="todos-addbar_select-all" aria-label="Mark all items as done">
+                <div class="todos-addbar_select-all_icon"></div>
+            </button>
+
+            <div class="todos-addbar_new-item-w">
+                <input class="todos-addbar_new-item" type="text" placeholder="What needs to be done?" aria-label="Add new task to todo list">
+            </div>
+        </div>
+
+        <div class="todos-list">
+            <div class="todos-item __ready">
+                <input type="checkbox" aria-label="Mark task as done" checked="checked" class="todos-item_ready-mark">
+                <textarea class="todos-item_text">Сделать html</textarea>
+                <button class="todo-item_remove" aria-label="Remove task"></button>
+            </div>
+
+            <div class="todos-item">
+                <input class="todos-item_ready-mark" type="checkbox" aria-label="Mark task as not done">
+                <textarea class="todos-item_text">Сделать css и js</textarea>
+                <button class="todo-item_remove" aria-label="Remove task"></button>
+            </div>
+        </div>
+
+        <div class="todos-actionbar">
+            <div class="todos-actionbar_counter" aria-label="Amount of remaining tasks">
+                n items left
+            </div>
+
+            <div class="todos-actionbar_filters">
+                <button class="todos-actionbar_filter __active" value="all" aria-label="Show all tasks">All</button>
+                <button class="todos-actionbar_filter" value="active" aria-label="Show current tasks">Active</button>
+                <button class="todos-actionbar_filter" value="completed" aria-label="Show completed tasks">Completed</button>
+            </div>
+
+            <div class="todos-actionbar_clear">
+                <button class="todos-actionbar_clear-button" aria-label="Clear completed tasks">
+                    Clear completed
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
