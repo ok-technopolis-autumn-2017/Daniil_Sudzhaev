@@ -1,0 +1,26 @@
+.todos-actionbar {
+    display: flex;
+    height: 40px;
+    position: relative;
+    align-items: center;
+    color: #888;
+    font-weight: 200;
+    }
+
+    .todos-actionbar_counter {
+        float: left;
+        margin-left: 12px;
+        }
+
+    .todos-actionbar_clear-button {
+        float: right;
+        position: relative;
+        order: 2;
+        margin-right: 12px;
+        padding: 0;
+        outline: none;
+        background: none;
+        border: none;
+        color: inherit;
+        font-weight: inherit;
+        }
