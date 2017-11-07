@@ -15,6 +15,11 @@
         opacity: 100;
         }
 
+    .todos-item.__ready > .todos-item_text {
+        text-decoration: line-through;
+        color: #ccc;
+        }
+
     .todos-item_ready-mark {
         float: left;
         position: relative;
@@ -36,8 +41,6 @@
             z-index: 1;
             }
 
-            /* Зачеркнуть текст, когда чекбокс активный, через css не получается,
-               т.к. текст находится на уровне родителя */
             .todos-item_ready-mark_target:checked ~ .todos-item_ready-mark_visual {
                 background: url('../../img/icons/completed.png') no-repeat 50% 65%;
                 border-color: #5dc2af;
