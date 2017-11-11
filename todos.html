@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Todos</title>
 
-    <link rel="stylesheet" href="./styles/default.css"/>
+    <link rel="stylesheet" href="./styles/default.css" />
 </head>
 
 <body>
@@ -34,8 +34,12 @@
             <div class="todos-item">
 
                 <div class="todos-item_ready-mark">
-                    <input class="todos-item_ready-mark_target" type="checkbox" aria-label="Mark task as done">
-                    <div class="todos-item_ready-mark_visual"></div>
+
+                    <div class="ready-mark">
+                        <input class="ready-mark_target" type="checkbox" aria-label="Mark task as done">
+                        <div class="ready-mark_visual"></div>
+                    </div>
+
                 </div>
 
                 <button class="todos-item_remove" aria-label="Remove task">
@@ -49,8 +53,12 @@
             <div class="todos-item  __ready">
 
                 <div class="todos-item_ready-mark">
-                    <input class="todos-item_ready-mark_target" type="checkbox" aria-label="Mark task as done" checked="checked">
-                    <div class="todos-item_ready-mark_visual"></div>
+
+                    <div class="ready-mark">
+                        <input class="ready-mark_target" type="checkbox" aria-label="Mark task as done" checked="checked">
+                        <div class="ready-mark_visual"></div>
+                    </div>
+
                 </div>
 
                 <button class="todos-item_remove" aria-label="Remove task">
@@ -64,8 +72,12 @@
             <div class="todos-item">
 
                 <div class="todos-item_ready-mark">
-                    <input class="todos-item_ready-mark_target" type="checkbox" aria-label="Mark task as done">
-                    <div class="todos-item_ready-mark_visual"></div>
+
+                    <div class="ready-mark">
+                        <input class="ready-mark_target" type="checkbox" aria-label="Mark task as done">
+                        <div class="ready-mark_visual"></div>
+                    </div>
+
                 </div>
 
                 <button class="todos-item_remove" aria-label="Remove task">
@@ -88,10 +100,10 @@
                 Clear completed
             </button>
 
-            <div class="todos-filters">
-                <button class="todos-filter __active" value="all" aria-label="Show all tasks">All</button>
-                <button class="todos-filter" value="active" aria-label="Show current tasks">Active</button>
-                <button class="todos-filter" value="completed" aria-label="Show completed tasks">Completed</button>
+            <div class="filters">
+                <button class="filter __active" value="all" aria-label="Show all tasks">All</button>
+                <button class="filter" value="active" aria-label="Show current tasks">Active</button>
+                <button class="filter" value="completed" aria-label="Show completed tasks">Completed</button>
             </div>
 
         </div>

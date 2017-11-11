@@ -1,11 +1,16 @@
 .todos-actionbar {
     display: flex;
+    justify-content: space-between;
     height: 40px;
     position: relative;
     align-items: center;
     color: #888;
     font-weight: 200;
     }
+
+    .todos-actionbar:after {
+        clear: both;
+        }
 
     .todos-actionbar_counter {
         float: left;

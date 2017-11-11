@@ -1,9 +1,8 @@
-.todos-filters {
+.filters {
     color: inherit;
-    margin: 0 auto;
     }
 
-.todos-filter {
+.filter {
     font-weight: inherit;
     color:inherit;
     background: none;
@@ -11,7 +10,7 @@
     outline: none;
     }
 
-    .todos-filter.__active {
+    .filter.__active {
         border: 1px solid #ebdfdf;
         border-radius: 2px;
         }
