@@ -1,27 +1,27 @@
+@import "../../config/globals";
+
+
 .todos-actionbar {
     display: flex;
     justify-content: space-between;
     height: 40px;
     position: relative;
     align-items: center;
-    color: #888;
+    color: $c-actionbar-text;
     font-weight: 200;
+    @include clearfix();
     }
-
-    .todos-actionbar:after {
-        clear: both;
-        }
 
     .todos-actionbar_counter {
         float: left;
-        margin-left: 12px;
+        margin-left: $offset_3x;
         }
 
     .todos-actionbar_clear-button {
         float: right;
         position: relative;
         order: 2;
-        margin-right: 12px;
+        margin-right: $offset_3x;
         padding: 0;
         outline: none;
         background: none;

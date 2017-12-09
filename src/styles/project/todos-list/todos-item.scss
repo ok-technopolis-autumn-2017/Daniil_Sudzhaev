@@ -1,32 +1,33 @@
+@import "../../config/globals";
+
+
 .todos-item {
     display: flex;
     align-items: center;
     min-height: 60px;
     background: none;
     padding: 0;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid $c-common-border;
+    @include clearfix();
     }
 
-    .todos-item:after {
-        clear: both;
-        }
-
     .todos-item:hover {
-        background-color: #fafafa;
+        background-color: $c-hover;
         }
 
     .todos-item:hover > .todos-item_remove {
-        opacity: 100;
+        opacity: 1;
         }
 
     .todos-item.__ready > .todos-item_text {
         text-decoration: line-through;
-        color: #ccc;
+        color: $c-light-text;
         }
 
     .todos-item.__ready .ready-mark_visual {
-        background: url('../../img/icons/completed.png') no-repeat 50% 65%;
-        border-color: #5dc2af;
+        background: url('../../../images/icons/completed.png') no-repeat 50% 65%;
+        @include retina('../../../images/icons/completed@2x.png');
+        border-color: $c-checkbox-border;
         }
 
     .todos-item_ready-mark {
@@ -43,9 +44,9 @@
         flex: 1 0;
         position: relative;
 
-        font-size: 24px;
+        font-size: $fs-item;
         font-weight: 200;
-        color: #666;
+        color: $c-text;
 
         border: 0;
         outline: none;
@@ -78,7 +79,8 @@
         .todos-item_remove_icon {
             width: 18px;
             height: 18px;
-            background: url('../../img/icons/close.png') no-repeat 0 0;
+            background: url('../../../images/icons/close.png') no-repeat 0 0;
+            @include retina('../../../images/icons/close@2x.png');
             position: absolute;
             left: 50%;
             top: 50%;

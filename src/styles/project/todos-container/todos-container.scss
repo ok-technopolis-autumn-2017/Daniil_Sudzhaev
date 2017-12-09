@@ -1,6 +1,9 @@
+@import "../../config/globals";
+
+
 .todos-container {
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    background: $c-todos-bg;
+    box-shadow: 0 2px 4px $c-shadow;
     position: relative;
     }
 
@@ -9,8 +12,8 @@
         content: '';
         position: absolute;
         top: 100%;
-        background: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+        background: $c-todos-bg;
+        box-shadow: 0 2px 4px $c-shadow;
         z-index: -1;
         }
 

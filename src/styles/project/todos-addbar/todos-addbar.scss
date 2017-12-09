@@ -1,12 +1,10 @@
-.todos-addbar {
-    border-bottom: 1px solid #e6e6e6;
-    }
+@import "../../config/globals";
 
-    .todos-addbar:after {
-        content: '';
-        display: block;
-        clear: both;
-        }
+
+.todos-addbar {
+    border-bottom: 1px solid $c-common-border;
+    @include clearfix();
+    }
 
     .todos-addbar_select-all {
         width: 60px;
@@ -26,7 +24,8 @@
         .todos-addbar_select-all_icon {
             width: 24px;
             height: 12px;
-            background: url('../../img/icons/select-all.png') no-repeat 0 0;
+            background: url('../../../images/icons/select-all.png') no-repeat 0 0;
+            @include retina('../../../images/icons/select-all@2x.png');
             position: absolute;
             left: 50%;
             top: 50%;
@@ -44,8 +43,8 @@
             border: 0;
             background: none;
 
-            color: #666;
-            font-size: 24px;
+            color: $c-text;
+            font-size: $fs-item;
             line-height: 30px;
             font-weight: 200;
             padding: 0 12px 0 0;
@@ -54,6 +53,6 @@
             }
 
             .todos-addbar_new-item::placeholder {
-                color: #ccc;
+                color: $c-light-text;
                 font-style: italic;
                 }
