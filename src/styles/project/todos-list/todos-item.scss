@@ -9,26 +9,26 @@
     padding: 0;
     border-bottom: 1px solid $c-common-border;
     @include clearfix();
+
+    &:hover {
+        background-color: $c-hover;
     }
 
-    .todos-item:hover {
-        background-color: $c-hover;
-        }
-
-    .todos-item:hover > .todos-item_remove {
+    &:hover > .todos-item_remove {
         opacity: 1;
-        }
+    }
 
-    .todos-item.__ready > .todos-item_text {
+    &.__ready > .todos-item_text {
         text-decoration: line-through;
         color: $c-light-text;
-        }
+    }
 
-    .todos-item.__ready .ready-mark_visual {
+    &.__ready .ready-mark_visual {
         background: url('../../../images/icons/completed.png') no-repeat 50% 65%;
         @include retina('../../../images/icons/completed@2x.png');
         border-color: $c-checkbox-border;
-        }
+    }
+    }
 
     .todos-item_ready-mark {
         float: left;

@@ -5,26 +5,26 @@
     background: $c-todos-bg;
     box-shadow: 0 2px 4px $c-shadow;
     position: relative;
-    }
 
-    .todos-container:before,
-    .todos-container:after {
+    &:before,
+    &:after {
         content: '';
         position: absolute;
         top: 100%;
         background: $c-todos-bg;
         box-shadow: 0 2px 4px $c-shadow;
         z-index: -1;
-        }
+    }
 
-        .todos-container:before {
+        &:before {
             height: 10px;
             left: 4px;
             right: 4px;
-            }
+        }
 
-        .todos-container:after {
+        &:after {
             height: 5px;
             left: 2px;
             right: 2px;
-            }
+        }
+    }

@@ -25,8 +25,7 @@ gulp.task('sass', () =>
         .pipe(sass().on('error', sass.logError))
         .pipe(rebaseUrls())
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('./public/dist')) // пришлось поменять,
-    // потому что пути к иконкам неправильно прописываются в default.css
+        .pipe(gulp.dest('./public/dist/styles'))
 );
 
 gulp.task('sass:watch', ['sass'], () =>
