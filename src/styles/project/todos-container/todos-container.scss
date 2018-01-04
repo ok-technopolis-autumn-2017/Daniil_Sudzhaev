@@ -27,4 +27,12 @@
             left: 2px;
             right: 2px;
         }
+
+    &.__empty .todos-actionbar {
+        display: none;
+    }
+
+    &.__empty .todos-addbar_select-all {
+        visibility: hidden;
+    }
     }

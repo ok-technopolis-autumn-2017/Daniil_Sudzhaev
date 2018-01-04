@@ -9,7 +9,6 @@
     align-items: center;
     color: $c-actionbar-text;
     font-weight: 200;
-    @include clearfix();
     }
 
     .todos-actionbar_counter {
@@ -28,4 +27,8 @@
         border: none;
         color: inherit;
         font-weight: inherit;
+
+        &.__hide {
+            visibility: hidden;
+        }
         }

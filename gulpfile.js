@@ -3,7 +3,8 @@ const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const clean = require('gulp-clean');
 const rebaseUrls = require('gulp-css-rebase-urls');
-
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
 
 gulp.task('images-clean-dist', () =>
     gulp.src('./public/dist/images', {read: false})
@@ -33,6 +34,5 @@ gulp.task('sass:watch', ['sass'], () =>
 );
 
 
-// common
 gulp.task('build', ['sass', 'images']);
 gulp.task('default', ['sass:watch', 'images:watch']);

@@ -14,11 +14,11 @@
         background-color: $c-hover;
     }
 
-    &:hover > .todos-item_remove {
+    &:hover .todos-item_remove {
         opacity: 1;
     }
 
-    &.__ready > .todos-item_text {
+    &.__ready .todos-item_text {
         text-decoration: line-through;
         color: $c-light-text;
     }
@@ -27,6 +27,10 @@
         background: url('../../../images/icons/completed.png') no-repeat 50% 65%;
         @include retina('../../../images/icons/completed@2x.png');
         border-color: $c-checkbox-border;
+    }
+
+    &.__hide {
+        display: none;
     }
     }
 

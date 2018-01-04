@@ -1,25 +1,28 @@
 {
-  "name": "preprocessor-stub",
+  "name": "Daniil_Sudzhaev",
   "version": "0.0.1",
-  "description": "Stub for setting up preprocessor",
-  "main": "index.js",
+  "description": "polis.mail.ru frontend course",
+  "main": "bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp build",
-    "watch": "gulp watch",
-    "start": "gulp"
+    "build": "webpack && gulp build"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:ok-technopolis/preprocessor-stub.git"
+    "url": "git@github.com:ok-technopolis-autumn-2017/Daniil_Sudzhaev.git"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-uglify": "^2.1.2",
     "gulp-clean": "^0.3.2",
     "gulp-css-rebase-urls": "0.0.5",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.5.1"
+    "gulp-sourcemaps": "^2.5.1",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "dependencies": {
+    "babel": "^6.23.0"
   }
 }
