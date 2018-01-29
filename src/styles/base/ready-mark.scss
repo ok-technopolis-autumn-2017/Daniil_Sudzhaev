@@ -14,6 +14,12 @@
         width: 100%;
         height: 100%;
         z-index: 1;
+
+        &:checked ~ .ready-mark_visual {
+            background: url('../../../images/icons/completed.png') no-repeat 50% 65%;
+            @include retina('../../../images/icons/completed@2x.png');
+            border-color: $c-checkbox-border;
+        }
         }
 
     .ready-mark_visual {

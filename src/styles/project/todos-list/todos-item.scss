@@ -23,18 +23,12 @@
         color: $c-light-text;
     }
 
-    &.__ready .ready-mark_visual {
-        background: url('../../../images/icons/completed.png') no-repeat 50% 65%;
-        @include retina('../../../images/icons/completed@2x.png');
-        border-color: $c-checkbox-border;
-    }
-
     &.__hide {
         display: none;
     }
     }
 
-    .todos-item_ready-mark {
+    .ready-mark {
         float: left;
         position: relative;
 
