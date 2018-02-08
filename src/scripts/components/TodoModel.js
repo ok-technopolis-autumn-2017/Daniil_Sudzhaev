@@ -43,7 +43,7 @@ TodoModel.prototype.get = function (field) {
  * @returns {TodoModel}
  */
 TodoModel.prototype.onChange = function (field, handler, ctx) {
-    this.on('modelFieldChanged', function (data) {
+    this.on('modelFieldChanged', data => {
         if (data.field === field) {
             handler.call(ctx, data);
         }
@@ -58,7 +58,7 @@ TodoModel.prototype.onChange = function (field, handler, ctx) {
  * @returns {TodoModel}
  */
 TodoModel.prototype.onAnyChange = function (handler, ctx) {
-    this.on('modelFieldChanged', function (data) {
+    this.on('modelFieldChanged', data => {
         handler.call(ctx, data);
         this.trigger('modelChanged', this);
     }, this);

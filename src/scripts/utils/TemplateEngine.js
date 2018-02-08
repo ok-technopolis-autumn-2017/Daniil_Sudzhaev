@@ -11,7 +11,7 @@ function getTemplateRootNode(scriptId) {
 }
 
 let templateEngine = {
-    todoItem: function (data) {
+    todoItem: data => {
         let root = getTemplateRootNode('todosItemTemplate');
         let readyMark = root.querySelector('.js-todos-item_ready-mark');
         let remove = root.querySelector('.js-todos-item_remove');

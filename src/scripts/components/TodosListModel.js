@@ -41,7 +41,7 @@ TodosListModel.prototype.onChange = function (handler, ctx) {
         .on('todoAdd', handler)
         .on('todoRemoved', handler)
         .on('todoChange', handler)
-        .on('modelReadyChanged', function (model) {
+        .on('modelReadyChanged', model => {
             if (model.get('isReady') && this._left !== 0) {
                 this._left -= 1;
             } else {
@@ -50,12 +50,12 @@ TodosListModel.prototype.onChange = function (handler, ctx) {
             this.trigger('todoChange');
             handler.call(ctx);
         }, this)
-        .on('modelRemoved', function (model) {
+        .on('modelRemoved', model => {
             this.remove(model.get('id'));
             this.trigger('todoChange');
             handler.call(ctx);
         }, this)
-        .on('modelChanged', function () {
+        .on('modelChanged', () => {
             this.trigger('todoChange');
             handler.call(ctx)
         }, this);
@@ -71,7 +71,7 @@ TodosListModel.prototype.onChange = function (handler, ctx) {
 TodosListModel.prototype.add = function (inputData) {
     let model = new TodoModel(Object.assign({id: this._itemIds++}, inputData));
 
-    model.onAnyChange(function (data) {
+    model.onAnyChange(data => {
         switch (data['field']) {
             case 'isReady':
                 this.trigger('modelReadyChanged', model);
@@ -138,7 +138,7 @@ TodosListModel.prototype.remove = function (id) {
  */
 TodosListModel.prototype.clearCompleted = function () {
     let copyModels = this.getList().slice();
-    copyModels.forEach(function (model) {
+    copyModels.forEach(model => {
         if (model.get('isReady')) {
             this.remove(model.get('id'));
         }

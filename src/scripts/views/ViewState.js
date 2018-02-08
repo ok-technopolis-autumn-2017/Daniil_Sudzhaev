@@ -12,7 +12,7 @@ function ViewState() {
 ExtendEventable(ViewState);
 
 ViewState.prototype.onChange = function (handler, ctx) {
-    this.on('filterChanged', function (filterName) {
+    this.on('filterChanged', filterName => {
         handler.call(ctx, {filter: filterName});
     });
 };

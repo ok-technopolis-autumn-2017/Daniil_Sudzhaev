@@ -17,7 +17,7 @@ function TodoItem(model) {
     this._text = element.text;
     this._model = model;
 
-    this._model.onChange('isReady', function (data) {
+    this._model.onChange('isReady', data => {
         this._manageReadyModifier(data['value']);
     }, this);
 

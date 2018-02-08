@@ -99,9 +99,7 @@ TodosList.prototype.remove = function (model) {
  * @returns {TodosList}
  */
 TodosList.prototype.selectAll = function () {
-    this._items.forEach(function (item) {
-        item.changeReady(true);
-    });
+    this._items.forEach(item => item.changeReady(true));
     return this;
 };
 
@@ -114,7 +112,7 @@ TodosList.prototype.filterItems = function (filter) {
         filter = viewState.getFilter();
     }
 
-    this._items.forEach(function (item) {
+    this._items.forEach(item => {
         switch (filter) {
             case 'all':
                 item.visible(true);
