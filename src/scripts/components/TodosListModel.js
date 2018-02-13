@@ -38,9 +38,9 @@ TodosListModel.prototype.getLeftItemsNumber = function () {
  */
 TodosListModel.prototype.onChange = function (handler, ctx) {
     this
-        .on('todoAdd', handler)
-        .on('todoRemoved', handler)
-        .on('todoChange', handler)
+        .on('todoAdd', handler, this)
+        .on('todoRemoved', handler, this)
+        .on('todoChange', handler, this)
         .on('modelReadyChanged', model => {
             if (model.get('isReady') && this._left !== 0) {
                 this._left -= 1;
